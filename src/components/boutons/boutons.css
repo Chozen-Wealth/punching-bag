@@ -1,0 +1,13 @@
+.divBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+button {
+    border: 2px solid white;
+    background-color: gray;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
