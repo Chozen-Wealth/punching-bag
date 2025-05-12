@@ -6,9 +6,12 @@ export default function Bag({pv}){
 
     const isWin = pv <= 0
 
+    const imgClass = `sac ${isWin ? "animate" : ""}`
+
     const bag = ()=>{
     return(
-      <img src={isWin ? sacBurst : sac} alt="" />
+        
+      <img className={imgClass} src={isWin ? sacBurst : sac} alt="" />
     )
     }
 
