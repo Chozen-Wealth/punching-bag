@@ -5,8 +5,9 @@ import Boutons from './components/boutons/boutons'
 import Bag from './components/bag/bag'
 
 function App() {
-
+  const [animate, setAnimate] = useState(false)
   const [pdv, setPdv] = useState(100)
+  const [go, setGo] = useState(false)
 
   const isWin = pdv <= 0
 
@@ -17,11 +18,12 @@ function App() {
         <Progress pv={pdv} />
         </div>
       <div className='divSac'>
-        <Bag pv={pdv}/>
+        <Bag pv={pdv} anime={animate} go={go}/>
       </div>
       <div className='divBtn'>
-        <Boutons pdv={pdv} setPdv={setPdv}/>
+        <Boutons pdv={pdv} setPdv={setPdv} newAnime={setAnimate} newGo={setGo} />
       </div>
+      <div className='sol'></div>
     </div>
   )
 }

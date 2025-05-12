@@ -4,10 +4,35 @@
     justify-content: center;
     gap: 10px;
 }
+
+button:disabled {
+    opacity: 0.5;
+    cursor: auto;
+}
 button {
-    border: 2px solid white;
-    background-color: gray;
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
+    z-index: 1;
+}
+
+#btnPunch {
+    border-radius: 50%;
+    height: 75px;
+    width: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid white;
+    cursor: pointer;
+    background-color: red;
+}
+#icon {
+    width: 50px;
+}
+#btnPunch:active {
+    transform: scale(75%);
+}
+#btnPunch:disabled:active {
+    transform: scale(100%);
+}
+#btnPunch:active #icon {
+    transform: scale(75%);
 }

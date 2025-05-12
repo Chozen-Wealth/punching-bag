@@ -12,10 +12,24 @@ body {
 .App {
     background-image: url(https://img.wattpad.com/ccb734fa06b9b94f699e25eb5e259a809247d289/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f6c6d494a465764756b63455652673d3d2d313234303136373232362e313730336236643565363966323336373538393537353731343333382e6a7067);
     background-size: cover;
-    background-position: center;
+    background-position: 50% 150%;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+.sol {
+    width: 100%;
+    background-image: url(./assets/ground.PNG);
+    height: 70px;
+    position: absolute;
+    bottom: 0px;
+    z-index: 0;
+}
+.divPv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }

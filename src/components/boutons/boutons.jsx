@@ -1,10 +1,18 @@
 import "./boutons.css"
+import icon from '../../assets/punch.svg'
 
-export default function Boutons({pdv, setPdv}){
-
+export default function Boutons({pdv, setPdv, newAnime, newGo}){
     let punch = ()=>{
         const newPdv = Math.max(pdv -10, 0)
         setPdv(newPdv)
+        newAnime(true)
+        setTimeout(() => {
+            newAnime(false)
+        }, 300);
+        newGo(true)
+        setTimeout(() => {
+            newGo(false)
+        }, 100);
         console.log("-10pv" + " pv restant : " + newPdv)
     }
     
@@ -20,7 +28,7 @@ export default function Boutons({pdv, setPdv}){
 
     return(
         <>
-            <button onClick={punch} disabled={isWin}>{isWin ? "KO !" : "Punch !"}</button>
+            <button id="btnPunch" onClick={punch} disabled={isWin}>{isWin ? "KO !" : (<img id="icon" src={icon} alt='' />)}</button>
             {reset()}
         </>
     )
