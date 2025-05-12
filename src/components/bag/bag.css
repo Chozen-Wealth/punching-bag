@@ -2,6 +2,17 @@
     transition: 0.3s ease;
     z-index: 1;
 }
+@keyframes respiration {
+    0% {
+        transform: scaleY(100%) scaleX(-1) translateY(0px);
+    }
+    50% {
+        transform: scaleY(98%) scaleX(-1) translateY(4px);
+    }
+    100% {
+        transform: scaleY(100%) scaleX(-1) translateY(0px);
+    }
+}
 .sac.animate {
     animation: coup 0.3s ease;
     z-index: 1;
@@ -26,6 +37,7 @@
     transform: scaleX(-1);
     z-index: 2;
     transition: 0.1s ease;
+    animation: respiration 1s ease forwards infinite;
 }
 .baki.punch {
     background-image: url(../../assets/baki-punch.png);
