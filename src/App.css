@@ -19,16 +19,4 @@ body {
     align-items: center;
     justify-content: center;
 }
-#progress::-webkit-progress-bar {
-    background-color: red;
-    border-radius: 10px;
-}
-#progress::-webkit-progress-value {
-    background-color: green;
-    border-radius: 10px;
-    transition: 0.3s ease;
-}
-#progress {
-    appearance: none;
-    accent-color: blue;
-}
+
