@@ -3,6 +3,7 @@ import './App.css'
 import Progress from './components/progress/progress'
 import Boutons from './components/boutons/boutons'
 import Bag from './components/bag/bag'
+import musiqueSrc from "./assets/ost.mp3"
 
 function App() {
   const [animate, setAnimate] = useState(false)
@@ -11,7 +12,6 @@ function App() {
 
   const isWin = pdv <= 0
 
-  
   return (
     <div className='App'>
       <div className='divPv'>

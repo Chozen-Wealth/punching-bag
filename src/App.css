@@ -33,13 +33,19 @@ body {
     align-items: center;
     width: 500px;
     flex-direction: column;
+    align-self: flex-start;
+    margin-left: 5%;
 }
 .divPv span {
     color: black;
-    padding: 10px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: white;
-    border-radius: 20px 5px 0px 0px;
+    border-radius: 5px 20px 0px 0px;
     /* transform: translateX(178px) translateY(5px); */
     z-index: 0;
-    align-self: flex-end;
+    align-self: flex-start;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
