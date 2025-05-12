@@ -66,15 +66,18 @@ button {
     animation: apparition 0.3s forwards;
 }
 #reset {
-    background-color: black;
-    color: red;
-    border: 2px solid red;
+    background-color: red;
+    color: black;
+    border: 2px solid black;
     border-radius: 10px;
     padding: 10px;
     cursor: pointer;
+    transition: 0.3s ease;
 }
 #reset:hover {
-    background-color: rgb(94, 9, 9);
+    background-color: rgb(255, 0, 0);
+    color: white;
+    border-color: white;
 }
 #reset:active {
     background-color: red;

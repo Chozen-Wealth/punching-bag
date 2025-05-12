@@ -1,18 +1,21 @@
 #progress::-webkit-progress-bar {
-    background-color: red;
-    border-radius: 10px;
+    background-image: linear-gradient(to right, rgb(251, 0, 0), rgb(253, 101, 0));
+    border-radius: 10px 0px 10px 10px;
     width: 500px;
     height: 25px;
     overflow: hidden;
+    z-index: 2;
 }
 #progress::-webkit-progress-value {
-    background-color: rgb(1, 210, 1);
+    background-image: linear-gradient(to right, rgb(0, 251, 0), rgb(0, 253, 156));
     border-radius: 10px 0px 0px 10px;
     transition: 0.3s ease;
     width: 500px;
     height: 25px;
+    z-index: 2;
 }
 #progress {
     appearance: none;
     width: 500px;
+    z-index: 2;
 }

@@ -15,6 +15,7 @@ function App() {
   return (
     <div className='App'>
       <div className='divPv'>
+        <span>Sac : {pdv} / 100</span>
         <Progress pv={pdv} />
         </div>
       <div className='divSac'>
