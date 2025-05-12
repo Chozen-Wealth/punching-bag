@@ -1,17 +1,17 @@
 .sac {
-    transition: 0.3s;
+    transition: 0.3s ease;
     z-index: 1;
 }
 .sac.animate {
-    animation: coup 0.3s;
+    animation: coup 0.3s ease;
     z-index: 1;
 }
 
 @keyframes coup {
     0% { transform: translate(0px, 0px); }
   15% { transform: translate(-150px, -40px) rotate(45deg); }
-  50% { transform: translate(0px, 0px) rotate(0deg); }
-  75% { transform: translate(20px, 0px) rotate(30deg); }
+  50% { transform: translate(-5px, 0px); }
+  75% { transform: translate(5px, 0px); }
   100% { transform: translate(0px, 0px); }
 }
 .baki {

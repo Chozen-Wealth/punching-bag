@@ -5,7 +5,7 @@
     height: 25px;
 }
 #progress::-webkit-progress-value {
-    background-color: green;
+    background-color: rgb(36, 222, 36);
     border-radius: 10px;
     transition: 0.3s ease;
     width: 500px;
