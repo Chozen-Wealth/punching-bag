@@ -21,7 +21,10 @@ export default function Boutons({pdv, setPdv, newAnime, newGo}){
     const reset = ()=>{
         if (isWin) {
             return(
-                <button id='reset' onClick={()=> {setPdv(100)}}>Rejouer</button>
+                <div className="divWin">
+                    <span>Félicitation, vous avez gagné !</span>
+                    <button id='reset' onClick={()=> {setPdv(100)}}>Rejouer</button>
+                </div>
             )
         }
     }

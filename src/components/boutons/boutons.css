@@ -10,7 +10,7 @@ button:disabled {
     cursor: auto;
 }
 button {
-    z-index: 1;
+    z-index: 3;
 }
 
 #btnPunch {
@@ -35,4 +35,51 @@ button {
 }
 #btnPunch:active #icon {
     transform: scale(75%);
+}
+#btnPunch:hover {
+    background-color: rgb(190, 1, 1);
+}
+@keyframes apparition {
+    0% {
+        opacity: 0;
+        top: 10%;
+    }
+    100% {
+        opacity: 1;
+        top: 20%;
+    }
+}
+.divWin {
+    position: absolute;
+    height: 130px;
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.75);
+    box-shadow: 0px 0px 10px black;
+    color: black;
+    top: calc(50% - 50px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid white;
+    transition: 0.3s ease;
+    animation: apparition 0.3s forwards;
+}
+#reset {
+    background-color: black;
+    color: red;
+    border: 2px solid red;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+#reset:hover {
+    background-color: rgb(94, 9, 9);
+}
+#reset:active {
+    background-color: red;
+    color: black;
+    border-color: black;
 }
