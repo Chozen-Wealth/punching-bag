@@ -1,9 +1,10 @@
 import "./boutons.css"
 import icon from '../../assets/punch.svg'
 import effect from "../../assets/punch.mp3"
-import { useRef } from "react"
+import { useRef, useState } from "react"
 
 export default function Boutons({pdv, setPdv, newAnime, newGo}){
+    // const [rand, setRand] = useState(Math.floor(Math.random()*3))
     let punch = ()=>{
         const newPdv = Math.max(pdv -10, 0)
         setPdv(newPdv)
@@ -15,16 +16,30 @@ export default function Boutons({pdv, setPdv, newAnime, newGo}){
         setTimeout(() => {
             newGo(false)
         }, 100);
-        
-        console.log("-10pv" + " pv restant : " + newPdv)
-    }
-    
-    const handlePunch = ()=>{
+        setRandom(Math.floor(Math.random()*10))
         if (audioRef.current) {
             audioRef.current.currentTime = 0.6;
             audioRef.current.play()
         }
     }
+    let superPunch = ()=>{
+        const newPdv = Math.max(pdv -20, 0)
+        setPdv(newPdv)
+        newAnime(true)
+        setTimeout(() => {
+            newAnime(false)
+        }, 300);
+        newGo(true)
+        setTimeout(() => {
+            newGo(false)
+        }, 100);
+        setRandom(Math.floor(Math.random()*10))
+        if (audioRef.current) {
+            audioRef.current.currentTime = 0.6;
+            audioRef.current.play()
+        }
+    }
+    
     const audioRef = useRef(null)
     const isWin = pdv <= 0
     
@@ -38,14 +53,14 @@ export default function Boutons({pdv, setPdv, newAnime, newGo}){
             )
         }
     }
-
+    const [random, setRandom] = useState(Math.floor(Math.random()*10))
     return(
         <>
-            <audio src={effect} ref={audioRef}></audio>
-            <button id="btnPunch" 
-            onClick={() => {punch();
-                 handlePunch();}
-                 } disabled={isWin}>{isWin ? "KO !" : (<img id="icon" src={icon} alt='' />)}</button>
+            {random === 2 ? 
+            (<button id="btnSuperPunch" onClick={() => superPunch()} disabled={isWin}>{isWin ? "KO !" : (<img id="icon" src={icon} alt='' />)}</button>)
+            :
+            (<button id="btnPunch" onClick={() => punch()} disabled={isWin}>{isWin ? "KO !" : (<img id="icon" src={icon} alt='' />)}</button>)
+            }
             {reset()}
         </>
     )
